@@ -2,6 +2,10 @@
   box-shadow: var(--shadow);
   position: relative;
 }
+.imageWrapper > span {
+  display: block !important;
+  min-height: 100px;
+}
 .imageWrapper::after {
   content: "";
   position: absolute;

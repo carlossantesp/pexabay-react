@@ -5,6 +5,7 @@ import Hero from "./components/Hero";
 import ListImages from "./components/ListImages";
 import Wrapper from "./components/Wrapper";
 import Button from "./components/Button";
+import Spinner from "./components/Spinner";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -12,6 +13,7 @@ function App() {
   const [currentPage, setCurrentPage] = useState(1);
   const [totalPages, setTotalPages] = useState(1);
   const contentRef = useRef();
+  const [loading, setLoading] = useState(false);
 
   useEffect(() => {
     const queryAPI = async () => {
@@ -28,7 +30,9 @@ function App() {
 
       const calculatePageTotal = Math.ceil(data.totalHits / perPage);
       setTotalPages(calculatePageTotal);
+      setLoading(false);
     };
+    setLoading(true);
     queryAPI();
   }, [search, currentPage]);
 
@@ -54,15 +58,21 @@ function App() {
       <div ref={contentRef}>
         <Hero setSearch={setSearch} />
         <Wrapper>
-          <ListImages images={images} />
-          <div className="paginate">
-            {currentPage === 1 ? null : (
-              <Button event={handlePrevious}>Anterior</Button>
-            )}
-            {currentPage === totalPages ? null : (
-              <Button event={handleNext}>Siguiente</Button>
-            )}
-          </div>
+          {loading ? (
+            <Spinner />
+          ) : (
+            <>
+              <ListImages images={images} />
+              <div className="paginate">
+                {currentPage === 1 ? null : (
+                  <Button event={handlePrevious}>Anterior</Button>
+                )}
+                {currentPage === totalPages ? null : (
+                  <Button event={handleNext}>Siguiente</Button>
+                )}
+              </div>
+            </>
+          )}
         </Wrapper>
       </div>
     </Fragment>
