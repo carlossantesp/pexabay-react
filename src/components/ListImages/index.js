@@ -2,6 +2,7 @@ import React from "react";
 import Masonry, { ResponsiveMasonry } from "react-responsive-masonry";
 import styles from "./ListImages.module.css";
 import Image from "../Image";
+import PropTypes from "prop-types";
 
 const ListImages = ({ images }) => {
   return (
@@ -15,6 +16,10 @@ const ListImages = ({ images }) => {
       </ResponsiveMasonry>
     </div>
   );
+};
+
+ListImages.propTypes = {
+  images: PropTypes.array.isRequired,
 };
 
 export default ListImages;

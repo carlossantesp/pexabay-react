@@ -2,6 +2,7 @@ import React from "react";
 import styles from "./Hero.module.css";
 import Wrapper from "../Wrapper";
 import Formulario from "../Formulario";
+import PropTypes from "prop-types";
 
 const Hero = ({ setSearch }) => {
   return (
@@ -32,6 +33,10 @@ const Hero = ({ setSearch }) => {
       </Wrapper>
     </section>
   );
+};
+
+Hero.propTypes = {
+  setSearch: PropTypes.func.isRequired,
 };
 
 export default Hero;

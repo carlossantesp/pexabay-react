@@ -1,5 +1,6 @@
 import React from "react";
 import styles from "./Button.module.css";
+import PropTypes from "prop-types";
 
 const Button = ({ children, event }) => {
   return (
@@ -7,6 +8,10 @@ const Button = ({ children, event }) => {
       {children}
     </button>
   );
+};
+
+Button.propTypes = {
+  event: PropTypes.func.isRequired,
 };
 
 export default Button;

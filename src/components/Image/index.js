@@ -4,6 +4,7 @@ import { FiDownload } from "react-icons/fi";
 import { FaEye, FaThumbsUp } from "react-icons/fa";
 import styles from "./Image.module.css";
 import "react-lazy-load-image-component/src/effects/blur.css";
+import PropTypes from "prop-types";
 
 const Image = ({ image }) => {
   const {
@@ -51,6 +52,10 @@ const Image = ({ image }) => {
       </div>
     </div>
   );
+};
+
+Image.propTypes = {
+  image: PropTypes.object.isRequired,
 };
 
 export default Image;
