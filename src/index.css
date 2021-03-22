@@ -2,6 +2,7 @@
 
 :root {
   --colorPrimary: #212121;
+  --colorHover: #393939;
   --colorText: #ffffff;
   --colorTextAccent: #efefef;
   --colorAlt: #dfdfdf;
@@ -43,4 +44,12 @@ body {
 img {
   width: 100%;
   display: block;
+}
+
+.paginate {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  margin: 2rem 0;
 }

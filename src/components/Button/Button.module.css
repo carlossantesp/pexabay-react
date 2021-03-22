@@ -1,0 +1,16 @@
+.btnPrimary {
+  border: none;
+  text-decoration: none;
+  cursor: pointer;
+  background-color: var(--colorPrimary);
+  border-radius: 2rem;
+  display: inline-block;
+  padding: 0.5rem 1rem;
+  font-size: 0.85rem;
+  font-weight: var(--medium);
+  color: var(--colorText);
+  transition: background-color 0.3s ease;
+}
+.btnPrimary:hover {
+  background-color: var(--colorHover);
+}
