@@ -5,7 +5,6 @@
   right: 0;
   z-index: 10;
   min-height: 64px;
-  background-color: rgba(37, 37, 37, 0.2);
 }
 .header > div {
   display: flex;

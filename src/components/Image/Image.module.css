@@ -4,7 +4,12 @@
 }
 .imageWrapper > span {
   display: block !important;
-  min-height: 100px;
+  min-height: 50px;
+}
+@media (min-width: 768px) {
+  .imageWrapper > span {
+    min-height: 100px;
+  }
 }
 .imageWrapper::after {
   content: "";

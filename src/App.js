@@ -31,6 +31,8 @@ function App() {
       const calculatePageTotal = Math.ceil(data.totalHits / perPage);
       setTotalPages(calculatePageTotal);
       setLoading(false);
+
+      contentRef.current.scrollIntoView({ behavior: "smooth" });
     };
     setLoading(true);
     queryAPI();
@@ -41,7 +43,6 @@ function App() {
     const newCurrentPage = currentPage - 1;
     if (newCurrentPage === 0) return;
     setCurrentPage(newCurrentPage);
-    contentRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   const handleNext = (e) => {
@@ -49,7 +50,6 @@ function App() {
     const newCurrentPage = currentPage + 1;
     if (newCurrentPage > totalPages) return;
     setCurrentPage(newCurrentPage);
-    contentRef.current.scrollIntoView({ behavior: "smooth" });
   };
 
   return (
