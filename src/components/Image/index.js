@@ -1,7 +1,9 @@
 import React from "react";
+import { LazyLoadImage } from "react-lazy-load-image-component";
 import { FiDownload } from "react-icons/fi";
 import { FaEye, FaThumbsUp } from "react-icons/fa";
 import styles from "./Image.module.css";
+import "react-lazy-load-image-component/src/effects/blur.css";
 
 const Image = ({ image }) => {
   const {
@@ -15,10 +17,17 @@ const Image = ({ image }) => {
   } = image;
   return (
     <div className={styles.imageWrapper}>
-      <img src={previewURL} alt={tags} />
+      <LazyLoadImage effect="blur" width={"100%"} alt={tags} src={previewURL} />
       <div className={styles.topImage}>
         <div className={styles.avatar}>
-          {userImageURL && <img src={userImageURL} alt={user} />}
+          {userImageURL && (
+            <LazyLoadImage
+              effect="blur"
+              width={"100%"}
+              alt={user}
+              src={userImageURL}
+            />
+          )}
           <p>{user}</p>
         </div>
         <a
