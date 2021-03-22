@@ -2,12 +2,13 @@ import React, { Fragment, useState, useEffect } from "react";
 import { config } from "./config/app";
 import Header from "./components/Header";
 import Hero from "./components/Hero";
+import ListImages from "./components/ListImages";
+import Wrapper from "./components/Wrapper";
 
 function App() {
   const [search, setSearch] = useState("");
   const [images, setImages] = useState([]);
   const [currentPage, setCurrentPage] = useState(1);
-  // const [totalPages, setTotalPages] = useState(1);
 
   useEffect(() => {
     const queryAPI = async () => {
@@ -30,6 +31,9 @@ function App() {
     <Fragment>
       <Header />
       <Hero setSearch={setSearch} />
+      <Wrapper>
+        <ListImages images={images} />
+      </Wrapper>
     </Fragment>
   );
 }

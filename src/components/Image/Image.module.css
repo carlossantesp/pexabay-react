@@ -1,0 +1,67 @@
+.imageWrapper {
+  box-shadow: var(--shadow);
+  position: relative;
+}
+.imageWrapper::after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(21, 21, 21, 0.3);
+}
+.topImage,
+.bottomImage {
+  position: absolute;
+  left: 0;
+  right: 0;
+  padding: 0.5rem;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  z-index: 1;
+}
+.topImage {
+  top: 0;
+}
+.bottomImage {
+  bottom: 0;
+}
+.avatar,
+.likes,
+.views {
+  display: flex;
+  align-items: center;
+  color: var(--colorText);
+}
+.avatar img {
+  width: 1.5rem;
+  height: 1.5rem;
+  border-radius: 50%;
+  margin-right: 0.25rem;
+}
+.avatar p,
+.likes p,
+.views p {
+  margin: 0;
+  font-size: 0.625rem;
+  font-weight: var(--medium);
+  line-height: 1;
+}
+.downloadImage {
+  color: var(--colorText);
+}
+.likes,
+.views {
+  display: flex;
+  align-items: center;
+}
+.likes svg {
+  margin-top: -0.25rem;
+}
+.likes svg,
+.views svg {
+  margin-left: 0.5rem;
+}
