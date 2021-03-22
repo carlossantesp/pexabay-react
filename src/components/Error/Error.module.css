@@ -1,0 +1,8 @@
+.error {
+  margin: 0.25rem 0 0 0;
+  color: #f02222;
+  font-size: 12px;
+  font-weight: var(--medium);
+  text-align: left;
+  margin-left: 0.75rem;
+}

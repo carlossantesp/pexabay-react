@@ -3,7 +3,7 @@ import styles from "./Hero.module.css";
 import Wrapper from "../Wrapper";
 import Formulario from "../Formulario";
 
-const Hero = () => {
+const Hero = ({ setSearch }) => {
   return (
     <section className={styles.hero}>
       <Wrapper>
@@ -22,7 +22,7 @@ const Hero = () => {
             </a>
           </p>
 
-          <Formulario />
+          <Formulario setSearch={setSearch} />
 
           <p className={styles.help}>
             Ejemplos para buscar: mujer, flores, fondos, familia, naturaleza,
