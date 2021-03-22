@@ -1,6 +1,6 @@
 {
-  "short_name": "React App",
-  "name": "Create React App Sample",
+  "short_name": "Pexabay App",
+  "name": "Clone de pixabay con react",
   "icons": [
     {
       "src": "favicon.ico",
