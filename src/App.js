@@ -6,6 +6,7 @@ import ListImages from "./components/ListImages";
 import Wrapper from "./components/Wrapper";
 import Button from "./components/Button";
 import Spinner from "./components/Spinner";
+import Footer from "./components/Footer";
 
 function App() {
   const [search, setSearch] = useState("");
@@ -75,6 +76,7 @@ function App() {
           )}
         </Wrapper>
       </div>
+      <Footer />
     </Fragment>
   );
 }

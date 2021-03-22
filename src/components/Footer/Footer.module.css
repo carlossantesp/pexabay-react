@@ -1,0 +1,30 @@
+.footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  font-size: 0.85rem;
+  padding: var(--md) 0;
+}
+.copy,
+.gratitude {
+  margin: 0;
+  font-weight: var(--medium);
+}
+.copy {
+  color: var(--colorHover);
+}
+.gratitude {
+  color: var(--colorPlaceHolder);
+  margin-top: var(--xs);
+  margin-bottom: var(--sm);
+}
+.copy a,
+.gratitude a {
+  color: var(--colorLink);
+  text-decoration: none;
+}
+
+.copy a:hover,
+.gratitude a:hover {
+  text-decoration: underline;
+}
